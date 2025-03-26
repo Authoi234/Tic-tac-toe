@@ -28,6 +28,9 @@ function Game() {
     }, []);
 
     useEffect(() => {
+        if(gameState === initialGameState){
+            return;
+        }
         checkForWinner()
     }, [gameState]);
 
